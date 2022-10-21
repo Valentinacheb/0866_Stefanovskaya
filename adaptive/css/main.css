@@ -1,0 +1,866 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* global reset */
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+html * {
+    max-height: 1000000px;
+}
+
+/* common */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+p {
+    color: #1f3f68;
+    opacity: 0.6;
+}
+h1 {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: rgba(31, 63, 104, 1);
+}
+h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000;
+}
+h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* structure */
+
+    html {
+        height: 100%;
+}
+    body {
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        font: normal 400 16px/26px 'Roboto';
+        letter-spacing: 0.05em;
+}
+    header {
+        height: 116px;
+        flex: none;
+        position: relative;
+        z-index: 1;
+}
+    footer {
+        height: 657px;
+        background: #316099;
+        flex: none;
+}
+    main {
+        flex: auto;
+        margin-top: -116px;
+}
+
+/* header */
+    header .container {
+        height: 48px;
+        padding: 34px 0;
+}
+    .logo {
+        float: left;
+        width: 46px;
+        height: 48px;
+        background: url('../images/logo.png') center center no-repeat;
+}
+    .user {
+        float: right;
+        width: 34px;
+        height: 48px;
+        background: url('../images/user.png') center center no-repeat;
+}
+
+/* footer */
+    .liner {
+        height: 0;
+        border-top: 1px solid rgba(255,255,255,.4);
+}
+    footer button {
+        float: right;
+        background: #5a98d0;
+        height: 56px;
+        width: 237px;
+        color: #fff;
+        letter-spacing: 0.04em;
+        margin: 100px 0 106px 408px;
+}
+    footer .container {
+        padding: 64px 0;
+        overflow: hidden;
+}
+    footer h2 {
+        color: #fff;
+        text-align: left;
+        margin: 27px 0 32px;
+}
+    footer p {
+        color: #fff;
+}
+    ol + p {
+        opacity: 0.4;
+}
+    ol {
+        list-style-type: upper-alpha;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 60px 22px;
+}
+    ol li {
+        width: 336px;
+}
+    ol li::before {
+        width: 20px;
+        height: 30px;
+        float: left;
+        content: '';
+}
+
+/* main hight-part*/
+    .grad {
+        height: 768px;
+        background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+    .grad .container {
+        padding: 183px 0 94px;
+        height: 491px;
+        background: url('../images/illustration.png') right 183px no-repeat;
+}
+    .grad .container p {
+        display: block;
+        width: 425px;
+        height: 82px;
+}
+    main h1 {
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 32px;
+}
+    main button {
+        background: #5a98d0;
+        height: 56px;
+        width: 220px;
+        color: #fff;
+        letter-spacing: 0.04em;
+        margin: 71px 0 190px 0;
+        border-radius: 10px;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, .2);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+}
+
+/* main middle-part*/
+    main h2 {
+        margin: 64px auto 64px auto;
+} 
+    main h4 {
+        text-align: left;
+        letter-spacing: 0.05em;
+        color: #1F3F68;
+        margin: 40px auto 10px auto;
+}
+    .boxes .container {
+        display: flex;
+        flex: none;
+        align-items: stretch;
+        gap: 32px;
+}
+    .boxes .container .box {
+        width: 359px;
+        height: 480px;
+        padding: 0 32px;
+        background: #FFFFFF;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+}
+    .imgbox {
+        display: block;
+        margin: 44px auto 0px auto;
+}
+    .learn {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #5A98D0;
+        text-align: center;
+}
+    .container .learn img {
+        display: inline-block;
+        list-style: none;
+        margin: 23px 15px -5px 15px;
+}
+
+/* main end-part*/
+    .between .container p {
+        display: block;
+        width: 750px;
+        height: 52px;
+        margin: 0px 195px 64px 195px;
+        text-align: center;
+        color: #222222;
+}
+    .between .container h2 {
+        margin: 64px auto 32px auto;
+}
+    .container .trio {
+        display: grid;
+        gap: 32px;
+        grid-template-areas: 'a a' 'b c';
+        margin-top: 64px;
+        margin-bottom: 113px
+}
+    .first h3 {
+       text-align: right;
+       margin: 64px 64px auto auto;
+}
+    .second h3 {
+       margin: 32px auto auto 32px;
+}
+    .third h3 {
+       margin: 32px auto auto 32px;
+}
+    .first {
+        width: 1140px;
+        height: 480px;
+        border-radius: 10px;
+        grid-area: a;
+        background: url('../images/first.png') center center no-repeat;
+}
+    .second { 
+        width: 554px;
+        height: 417px;
+        border-radius: 10px;
+        grid-area: b;
+        background: url('../images/second.png') center center no-repeat;
+}
+    .third {
+        width: 554px;
+        height: 417px;
+        border-radius: 10px;
+        grid-area: c;
+        background: url('../images/third.png') center center no-repeat;
+}
+
+/*  CONTACT US  */
+
+/*  line CONTACT US  */
+    .wave {
+        display: flex;
+        flex-direction: column;
+        margin: 129px auto 57px auto;
+        height: 250px;
+        width: 1366px;
+        background-image: url('../images/contact.png');
+}
+    .wave h1 {
+        padding-top: 46px;
+        margin-top: 3px;
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 74px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+}
+    .wave h4 {
+        margin-top: 0px;
+        width: 780px;
+        height: 60px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.6);
+}
+
+/* phone, address and massages */
+    .double {
+        width: 940px;
+        height: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+}
+    .double .one h4 {
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        margin: 40px auto 24px;
+}
+    .double h5 {
+        margin-bottom:-16px;
+}
+    .double .one {
+        height: 668px;
+        width: 301px;
+        margin-right: 101px;
+        margin-top: 78px;
+}
+    .pillow {
+        display: block;
+        padding-bottom: 16px; 
+        margin-top: -26px;
+        margin-right: 5px;
+}
+    .pic {
+        margin-right: 22px;
+        vertical-align: middle;
+}
+    .double .one p {
+        height: 26px;
+        width: 300px;
+        padding-bottom: 16px;
+}
+    .double .two {
+        height: 690px;
+        width: 412px;
+        background: #FFFFFF;
+        box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        margin-top: 0;
+        padding: 54px;
+}
+    .double .two h4 {
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        margin: 2px auto 48px;
+}
+    input, textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgb(53,110,173);
+        border-radius: 10px;
+        padding: 20px 35px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        opacity: 0.4;
+        margin-bottom: 31px;
+}
+    textarea {
+        font: normal 400 16px/26px 'Roboto';
+        min-height: 144px;
+        margin-bottom: 0;
+} 
+    label {
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        margin-bottom: 8px;
+        opacity: 0.8;
+}
+    .two button {
+        background: #5A98D0;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        text-transform: uppercase;
+        width: 100%;
+        height: 72px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        margin: 72px 0 56px;
+}
+    .map {
+        width: 940px;
+        height: 480px;
+        padding-bottom: 113px;
+        margin: 96px auto 0;
+}
+
+/* ADAPTIVE */
+
+@media screen and (max-width:1204px) {
+    .container {
+        width: auto;
+        margin: 0 32px;
+    }
+    footer {
+        height: 654px;
+    }
+    footer .container {
+        padding: 64px 92px;
+    }
+    footer button {
+        height: 32px;
+        width: 133px;
+        margin: 95px 0 65px 0;
+    }
+    footer h2 {
+        width: 336px;
+        margin: -16px 0 22px;
+    }
+    footer p {
+        width: 336px;
+    }
+    ol {
+        display: block;
+        margin-bottom: 53px;
+    }
+    ol li {
+        width: auto;
+        margin-bottom: 19px;
+    }
+    ol li::before {
+        height: 10px;
+        width: 40px;
+    }
+
+/* main hight-part*/
+    .grad {
+        height: 768px;
+        background: linear-gradient(0deg, #DFEDF8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+    .grad .container {
+        padding: 183px 0 94px;
+        height: 491px;
+        background: url('../images/illustration_s.png') right 360px no-repeat;
+}
+    main h1 {
+        margin-bottom: 32px;
+}
+    main h2 {
+        padding: 0px 32px;
+}
+
+/* main middle-part*/
+    main h4 {
+        margin: 47px auto 10px auto;
+}  
+    .boxes .container {
+        flex-direction: column;
+        align-items: center;
+}
+    .boxes .container .box {
+        width: 276px;
+        height: 457px;
+        padding: 0 30px;
+}  
+    .container .learn img {
+        display: inline-block;
+        list-style: none;
+        margin: 13px 15px -5px 15px;
+}
+
+/* main end-part*/
+    .between .container h2 {
+        margin: 127px auto 32px auto;
+}
+    .between .container p {
+        display: block;
+        width: 520px;
+        height: 78px;
+        margin: 0px auto 64px auto;
+        text-align: center;
+        color: #222222;
+}
+    .container .trio {
+        display: grid;
+        gap: 32px;
+        grid-template-areas: 'a a' 'b c';
+        justify-content: center;
+        margin-bottom: 109px;
+}
+    .first {
+        width: 705px;
+        height: 297px;
+        background-size: cover;
+}
+    .second {
+        width: 336px;
+        height: 253px;
+        background-size: cover;
+}
+    .third {
+        width: 336px;
+        height: 253px;
+        background-size: cover;
+}  
+    .first h3 {
+        font-size: 32px;
+}
+    .second h3 {
+       margin: 19.4px auto auto 19.4px;
+}
+    .third h3 {
+       margin: 19.3px auto auto 19.4px;
+}
+    
+/*  line CONTACT US  */
+
+/* phone, address and massages */    
+    .double {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+}
+    .wave {
+        width: auto;
+}
+    .wave h4 {
+        width: 520px;
+        height: 60px;
+
+}    
+    .double .one {
+        height: 668px;
+        width: 301px;
+        margin-right: 0px;
+        margin-top: 33px;
+}
+    .double .two {
+        margin-top: 26px;
+}
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        margin: 0 16px;
+}
+    header {
+        height: 80px;
+}
+    header .container {
+        padding: 16px 0;
+}
+    main {
+        margin-top: -80px;
+}
+    footer {
+        height: 553px;
+}
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 0 40px;
+}
+    footer button {
+        order: 1;
+        float: none;
+        width: 108px;
+        margin: 33px auto 0;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+}
+    footer h2 {
+        width: auto;
+        text-align: center;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        margin: 0 0 27px;
+}
+    footer p {
+        width: auto;
+        text-align: center;
+}
+    ol {
+        margin: 14px 0 11px 22px;
+}
+    ol li {
+        line-height: 19px;
+}
+    ol li::before {
+        height: 20px;
+        width: 20px;
+}
+
+/* main hight-part*/
+    .grad {
+        height: 498px;
+        background: linear-gradient(0deg, #DAEAF7 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+    .grad .container {
+        padding: 183px 0 0;
+        height: 376px;
+        background-image: none;  
+}
+    .grad .container p {
+        display: block;
+        text-align: center;
+        width: 343px;
+        height: 96px;
+        margin: 0 auto 32px auto;
+}
+    main {
+        margin-top: -202px;
+}
+    main h1 {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        margin-top: 28px;
+        margin-bottom: 12px;
+}
+    main button {
+        display: block;
+        background: #5a98d0;
+        height: 27px;
+        width: 108px;
+        color: #fff;
+        letter-spacing: 0;
+        margin: 0px auto 41px auto;
+        border-radius: 10px;
+        box-shadow: none;
+        font-size: 12px;
+}
+    main h2 {
+        padding: 0px 17px;
+        letter-spacing: 0em;
+}
+
+/* main middle-part*/
+    main h2 {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 48px auto 32px auto;
+}
+    main h4 {
+        margin: 28px auto 9px auto;
+}  
+    .boxes .container {
+        flex-direction: column;
+        align-items: center;
+}
+    .boxes .container .box {
+        width: 276px;
+        height: 457px;
+        padding: 0 30px;
+}  
+    .container img{
+        display: block;
+        margin: 41px auto 0px auto;
+}
+    .container .learn img {
+        display: inline-block;
+        list-style: none;
+        margin: 34px 15px -5px 15px;
+}
+
+/* main end-part*/
+    .between .container h2 {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 64px auto 32px auto;
+}
+    .between .container p {
+        display: block;
+        width: 343px;
+        height: 104px;
+        margin: 0px auto 82px auto;
+        text-align: center;
+        color: #222222;
+        opacity: 1;
+}
+    .container .trio {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 82px;
+        margin-bottom: 64px;
+}
+    .first {
+        width: 343px;
+        height: 144px;
+        background-size: cover;
+}
+    .second {
+        width: 343px;
+        height: 255px;
+        background-size: cover;
+}
+    .third {
+        width: 343px;
+        height: 262px;
+        background-size: cover;
+}  
+    .first h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: right;
+        margin: 16px 16px auto auto;
+}
+    .second h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 26px auto auto 16px;
+}
+    .third h3 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 16px auto auto 16px;
+}
+
+/*  line CONTACT US  */
+
+/* phone, address and massages */    
+    .wave {
+        width: auto;
+        margin: 211px auto 57px auto;
+}
+    .wave h1{
+        padding-top: 46px;
+        margin-top: 3px;
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+}
+    .wave h4 {
+        width: 341px;
+        height: 81px;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+}    
+      .double {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+}
+    .double .one {
+        height: 668px;
+        width: 301px;
+        margin-top: 33px;
+        margin-left: 20px;
+}
+    .double .two {
+        width: 271px;
+        height: 514px;
+        padding: 36px;
+        margin-top: 26px;
+}
+    .double .two h4 {
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        margin: 2px auto 48px;
+}
+    label {
+        font-size: 14px;
+        margin-bottom: 1px;
+}
+    input, textarea {
+        padding: 13px 22px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 31px;
+}
+    textarea {
+        font: normal 400 14px/26px 'Roboto';
+        min-height: 92px;
+        margin-bottom: 0;
+} 
+    .two button {
+        height: 46px;
+        margin: 46px 0 36px;
+}
+    .map {
+        width: 940px;
+        height: 480px;
+        margin: 32px auto 0;
+}
+
+@media screen and (max-width:960px) {
+    .map{
+        width: 100%;
+        height: 392px;
+        padding-bottom: 32px;
+        position: relative;
+        overflow: hidden;
+}
+    .map > img {
+        height: 392px;
+        position: absolute;
+        margin-left: -384px;
+        left: 50%;
+        top: 0;
+}
+}
+
+
