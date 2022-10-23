@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'MarckScript';
+    src: url(./MarckScript.woff2) format('woff2');
+    font-family: 'MarckScript';
+}
+@font-face {
+    font-family: 'SemiBold';
+    src: url(./SemiBold.woff2) format('woff2');
+    font-family: 'SemiBold';
+}
+/* global reset */
+html, body, body div, div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, img, s, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, button, form, fieldset, article, aside, footer, header, main, nav, section, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+html * {
+    max-height: 1000000px;
+}
+    html {
+        height: 100%;
+}
+    body {
+        height: 100%;
+        background: #fff;
+        font: normal 300 20px/30px 'MarckScript';
+}
+    header {
+        font: normal 200 20px 'SemiBold';
+        height: 80px;
+        flex: none;
+        position: relative;
+        background: #423189;
+        z-index: 1;
+}
+    footer {
+        font: normal 200 15px 'SemiBold';
+        color: #a4a4a4;
+        height: 140px;
+        line-height: 140px;
+        background: #228B22;
+        flex: none;
+}
+    main {
+        flex: auto;
+        background: url('nature.jpg') center center no-repeat;
+        background-size: cover;
+}
+    .center {
+        min-width: 1200px;
+        text-align: center;
+}
+    header a {
+        color: #fff;
+        height: 30px;
+        display: inline-block;
+        padding-right: 80px;
+        text-decoration: none;
+        padding-top: 25px;
+}
+    h1 {
+        color: #2e353d;
+        font-size: 60px;
+        color: #fff;
+        line-height: 50px;
+        font-weight: 500;
+        padding-top: 50px;
+        margin-bottom: 75px;
+}
+    .content {
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+}
+    main img {
+        margin-left: 10px;
+        width: 350px;
+        border-radius: 50%;
+        float: left;
+        padding-bottom: 50px;
+}
+    .box {
+        background: #fff;
+        margin: 0 10px 0 420px;
+        padding: 30px;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        color: #242424;
+}
