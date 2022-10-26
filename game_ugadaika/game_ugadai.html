@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Игра "Угадайка"</title>
+    
+    <style>
+    
+        @font-face {
+                font-family: 'SemiBold-Bold';
+                src: url(./BalsamiqSans-Bold.woff2) format('woff2');
+        }
+        
+        @font-face {
+                font-family: 'SemiBold-Regular';
+                src: url(./BalsamiqSans-Regular.woff2) format('woff2');
+        }
+        
+        div {
+            background: url('chisla.jpg') center center no-repeat;
+            background-size: cover;
+            flex: auto;
+            margin: auto;
+            text-align: center;
+            width: 500px;
+            height: 400px;
+            border: 1px solid #DC143C;
+            font-family: 'SemiBold-Regular';
+            border-radius: 10px;
+        }
+        
+        h1 {
+            padding-top: 60px;
+        }
+        
+        p {
+            padding-bottom: 50px;
+            font-size: 20px;
+        }
+        
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: #DA70D6;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-family: 'SemiBold-Regular';
+            font-size: 18px;
+        }   
+        input {
+            width: 150px;
+            height: 30px;
+            margin-right: 30px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="window1">
+            <h1>Игра "Угадай число"</h1>
+            <p id="step1">Для начала игры нажмите кнопку</p>
+            <button type="button" id="btn1">Начало игры</button>
+        </div>
+        
+        <div id="window2" style="display:none">
+            <h1 id="step2">Введите число от 1 до 100</h1>
+            <input type="text" id="vvod">
+            <button type="button" id="btn2">OK</button>
+        </div>
+        
+        <div id="window3" style="display:none">
+            <h1 id="step3">Поздравляю! Вы угадали число с</h1>
+            <p id="again">Сыграем еще раз?</p>
+            <button type="button" id="btn3">OK</button>
+        </div>
+       
+    </div>
+    
+    <script>
+        let counter = 0;
+        let num = document.getElementById('vvod');
+        let quest = Math.floor(Math.random() * 100 + 1);
+        
+        console.log(quest);
+        
+        document.getElementById('btn1').onclick = function(){
+            document.getElementById('window1').style.display = "none";
+            document.getElementById('window2').style.display = "block";
+            document.getElementById('window3').style.display = "none";
+            counter = 0;
+        }
+        
+        document.getElementById('btn2').onclick = function(){
+            let numvalue = num.value;        
+            counter++;
+            if (isNaN(numvalue)) {
+                alert('Введите число');
+                    } else if (numvalue == quest) {
+                            document.getElementById('window1').style.display = "none";
+                            document.getElementById('window2').style.display = "none";
+                            document.getElementById('window3').style.display = "block";
+                            document.getElementById('step3').innerHTML ="Поздравляю! Вы угадали число с " + counter + " попытки.";
+                        } else if (numvalue > quest) {
+                            document.getElementById('window1').style.display = "none";
+                            document.getElementById('window2').style.display = "block";
+                            alert ('Надо меньше');
+                                } else {
+                                        document.getElementById('window1').style.display = "none";
+                                        document.getElementById('window2').style.display = "block";
+                                        alert ('Надо больше');
+                                    }
+        }
+        
+        document.getElementById('btn3').onclick = function(){
+            document.getElementById('window1').style.display = "block";
+            document.getElementById('window2').style.display = "none";
+            document.getElementById('window3').style.display = "none";
+            location.reload ();
+        }
+    </script>
+</body>
+</html>
