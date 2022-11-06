@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Корзина</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" >Каталог</a></li>
+                        <li><a href="product.html">Товар</a></li>
+                        <li><a href="order.html" class="current">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин белочка" src="./images/belochka_logo.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+
+                    <div class="header_right_block">
+                        <div class="links_account">
+                            <a class="link_enter" href="#"><span>Войти</span></a>
+                            <a class="link_registration" href="#">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="basket_wrap" href="korzina.html">
+                            <div class="basket_icon">
+                                <span>Корзина</span>
+                            </div> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+    
+        <main class="order">
+            <section class="container">
+                <div class="order_row">
+                    <div class="order_table">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="index">#</th>
+                                    <th scope="col" class="name">Название</th>
+                                    <th scope="col" class="qty">Количество</th>
+                                    <th scope="col" class="price">Цена</th>
+                                    <th scope="col" class="sum">Сумма</th>
+                                    <th scope="col" class="delete">Удалить</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <!-- список товаров генерим на лету -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                <th scope="col" class="index"></th>
+                                <th scope="col" class="allsum" colspan="5">
+                                    Итого:
+                                    <span></span>
+                                </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="order_forms">
+                        <form>
+                            <div class="form_group">
+                                <label for="name" class="form_label">Ваше имя</label>
+                                <input type="text" class="form_control" id="name" name="name">
+                            </div>
+                            <div class="form_group">
+                                <label for="mail" class="form_label">Ваша почта</label>
+                                <input type="text" class="form_control" id="mail" name="mail">
+                            </div>
+                            <div class="form_group">
+                                <label for="phone" class="form_label">Ваш телефон</label>
+                                <input type="text" class="form_control" id="phone" name="phone">
+                            </div>
+                            <div class="form_group">
+                                <label for="addr" class="form_label">Ваш адрес</label>
+                                <input type="text" class="form_control" id="addr" name="addr">
+                            </div>
+                            <label for="date" class="form_label">Дата доставки</label>
+                            <div class="form_group time">
+                                <input type="text" class="form_control" id="date" name="date" readonly>
+                                <button class="btn btn-outline-secondary icon" type="button">&#xe907;</button>
+                            </div>
+                            <div class="form_group">
+                                <label for="comm" class="form_label">Комментарий</label>
+                                <textarea class="form_control_text" id="comm" name="comm" rows="3"></textarea>
+                            </div>
+                            <div class="form_check">
+                                <input type="checkbox" class="form-check-input" id="agree" name="agree" checked>
+                                <label class="form-check-label" for="agree">Согласен на обработку моих персональных данных</label>
+                            </div>
+                            <div class="form_group order_button">
+                                <button type="button" class="btn btn-primary btn_submit_forms">Оформить заказ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="container empty">
+                <h1>Ваша корзина пуста</h1>
+                <p>Выберите товары в каталоге</p>
+            </section>
+            
+        </main>
+    
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="order.html">Корзина</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин вкусных и полезных продуктов для вашего здоровья</p>
+                            <p class="copyright_text">Все права защищены<br>Belochka © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">8 800 888-88-88</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">Москва, ул. Строителей, д.12</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

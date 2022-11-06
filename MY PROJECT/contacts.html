@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Карточка товара</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" >Каталог</a></li>
+                        <li><a href="product.html">Товар</a></li>
+                        <li><a href="order.html">Корзина</a></li>
+                        <li><a href="contacts.html" class="current">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин белочка" src="./images/belochka_logo.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+
+                    <div class="header_right_block">
+                        <div class="links_account">
+                            <a class="link_enter" href="#">Войти</a>
+                            <a class="link_registration" href="#">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="basket_wrap" href="korzina.html">
+                            <div class="basket_icon">
+                                <span>Корзина</span>
+                            </div> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+    
+        <main>
+            <section class="container">
+                <div class="contacts_block">
+                    <div class="adress" itemprop="adress" itemtype="http://schema.org/PostalAddress">
+                        <h2>Контакты</h2>
+                        <p>
+                            <strong>
+                                <span itemprop="name">Интернет-магазин "Белочка.рф"</span>
+                            </strong>
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Адрес:</strong>
+                            <span>Москва, ул.Строителей, д.12</span>
+                        </p>
+                        <br>
+                        <p><strong>Прием заказов и служба поддержки клиентов</strong></p>
+                        <p> </p>
+                        <p>
+                            <span><strong>Телефон интернет-магазина:  </strong>8 800 888-88-88</span>
+                            <br>
+                            <strong>Прием и обработка заказов:  </strong>
+                            <a style="color: #428bca;" href="#">
+                                <span itemprop="email">sales@belochka.ru</span>
+                            </a>
+                            <br>
+                            <strong>Служба контроля качества:  </strong>
+                            <a style="color: #428bca;" href="#">
+                                <span itemprop="email">service@belochka.ru</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="contacts_forms">
+                        <form id="mess_form" class="message_form" method="post">
+                            <div class="form_group">
+                                <label>Ваше имя</label>
+                                <input class="form_control" name="message_name" type="text" placeholder="Ваше имя*">
+                            </div>
+                            <div class="form_group">
+                                <label>Ваш адрес электронной почты</label>
+                                <input class="form_control" name="message_email" type="email" placeholder="E-mail*">
+                            </div>
+                            <div class="form_group">
+                                <label>Сообщение</label>
+                                <textarea class="form_control_text" name="message_message"></textarea>
+                            </div>
+                            <div id="message_form_result">
+                                <button class="btn_submit_forms" type="submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <iframe scr="#"></iframe>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="order.html">Корзина</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин вкусных и полезных продуктов для вашего здоровья</p>
+                            <p class="copyright_text">Все права защищены<br>Belochka © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">8 800 888-88-88</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">Москва, ул. Строителей, д.12</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

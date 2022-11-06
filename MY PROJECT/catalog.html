@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Каталог</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="current">Каталог</a></li>
+                        <li><a href="product.html">Товар</a></li>
+                        <li><a href="order.html">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин белочка" src="./images/belochka_logo.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+
+                    <div class="header_right_block">
+                        <div class="links_account">
+                            <a class="link_enter" href="#">Войти</a>
+                            <a class="link_registration" href="#">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="basket_wrap" href="korzina.html">
+                            <div class="basket_icon">
+                                <span>Корзина</span>
+                            </div> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+        
+        
+        <main class="catalog">
+            <section class="container">
+                <aside>
+                    <nav class="catmenu">
+                        <ul class="slider_list">
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Орехи</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Арахис</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Бразильский орех</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Грецкий орех</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Кешью</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Макадамия</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Миндаль</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Фисташки</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Фундук</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Сухофрукты</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Изюм</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Курага</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Финики</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Семечки и семена</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Подсолнечника</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Тыквенные</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Чиа</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Киноа</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="slider_list_elements">
+                                <a href="#"><span>Сушенные ягоды</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Цукаты</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Специи и пряности</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Суперфуды</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Масло</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Кофе</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Чай</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /catmenu -->
+                    <div class="filters">
+                        <p>Фильтры</p>
+                        <p>
+                            <label for="amount">Цена от</label>
+                            <input type="text" id="amount1">
+                            <label for="amount">до</label>
+                            <input type="text" id="amount2">
+                        </p>          
+                        <div id="slider-range"></div>
+                    </div>
+                </aside>
+                
+                <article>
+                    <div class="cat-item">
+                        <a href="#" title="Орехи">
+                            <div class="cat-item-image">
+                                <img src="./images/orex.jpg" alt="Орехи">
+                            </div>
+                            <span class="cat-title">Орехи</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Сухофрукты">
+                            <div class="cat-item-image">
+                                <img src="./images/suhofrukty.jpg" alt="Сухофрукты">
+                            </div>
+                            <span class="cat-title">Сухофрукты</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Семечки и семена">
+                            <div class="cat-item-image">
+                                <img src="./images/semechki-i-semena.jpg" alt="Семечки и семена">
+                            </div>
+                            <span class="cat-title">Семечки и семена</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Сушенные ягоды">
+                            <div class="cat-item-image">
+                                <img src="./images/sushenye-jagody.jpg" alt="Сушенные ягоды">
+                            </div>
+                            <span class="cat-title">Сушенные ягоды</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Цукаты">
+                            <div class="cat-item-image">
+                                <img src="./images/cukaty.jpg" alt="Цукаты">
+                            </div>
+                            <span class="cat-title">Цукаты</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Специи и пряности">
+                            <div class="cat-item-image">
+                                <img src="./images/specii-i-prjanosti.jpg" alt="Специи и пряности">
+                            </div>
+                            <span class="cat-title">Специи и пряности</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Суперфуды">
+                            <div class="cat-item-image">
+                                <img src="./images/superfudy.jpg" alt="Суперфуды">
+                            </div>
+                            <span class="cat-title">Суперфуды</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Растительное масло">
+                            <div class="cat-item-image">
+                                <img src="./images/rastitelnoe-maslo.jpg" alt="Растительное масло">
+                            </div>
+                            <span class="cat-title">Масло</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Кофе">
+                            <div class="cat-item-image">
+                                <img src="./images/kofe.jpg" alt="Кофе">
+                            </div>
+                            <span class="cat-title">Кофе</span>
+                        </a>
+                    </div>
+                    <div class="cat-item">
+                        <a href="#" title="Чай">
+                            <div class="cat-item-image">
+                                <img src="./images/chaj.jpg" alt="Чай">
+                            </div>
+                            <span class="cat-title">Чай</span>
+                        </a>
+                    </div>
+
+                </article>
+            </section>
+        </main>
+
+
+
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="order.html">Корзина</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин вкусных и полезных продуктов для вашего здоровья</p>
+                            <p class="copyright_text">Все права защищены<br>Belochka © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">8 800 888-88-88</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">Москва, ул. Строителей, д.12</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

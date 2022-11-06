@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Карточка товара</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <section class="container">
+                <nav class="topmenu">
+                    <ul class="links_navigation_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" >Каталог</a></li>
+                        <li><a href="product.html" class="current">Товар</a></li>
+                        <li><a href="order.html">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section class="container">
+                <div class="header_wrap">
+                
+                    <div class="header_left_logo">
+                        <a title="Logotip" href="index.html">
+                        <img class="logo" alt="Интернет-магазин белочка" src="./images/belochka_logo.jpg">
+                        </a>
+                    </div>
+                    
+                    <div class="header_left_block">
+                        <div class="user_location">
+                            <span class="text-title">Ваш город</span>
+                            <span id="city" class="list_city_select" data-modal="city_select"><span></span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="header_center_block">   
+                        <div class="search_form">
+                            <form action="rezultat_poiska.html" method="get">
+                                <input class="input input_search" placeholder="Поиск по товарам">
+                                <button class="button button_search" type="submit">Поиск</button>
+                            </form>
+                        </div>
+                    </div> 
+
+                    <div class="header_right_block">
+                        <div class="links_account">
+                            <a class="link_enter" href="#">Войти</a>
+                            <a class="link_registration" href="#">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="header_right_basket">
+                        <a class="basket_wrap" href="korzina.html">
+                            <div class="basket_icon">
+                                <span>Корзина</span>
+                            </div> 
+                        </a>
+                    </div>
+                </div>             
+            </section>
+        </header>
+    
+        <main class="order">
+            <section class="container">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <a href="index.html">
+                                <span itemprop="name">Главная страница</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                            <link itemprop="url" href="index.html">
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <a href="catalog.html">
+                                <span itemprop="name">Каталог</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                            <link itemprop="url" href="catalog.html">
+                        </li>
+                        
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb_list_element">
+                            <span itemprop="name">Товар</span>
+                            <meta itemprop="position" content="3">
+                            <link itemprop="url" href="product.html">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container">
+                <div class="product" data-product-id="arahis" itemscope itemtype="https://schema.org/Product">
+                    <div class="images">
+                        <div class="bigimage">
+                            <img src="images/big_arahis.jpg" alt="арахис" itemprop="image">
+                        </div>
+                        
+                        <div class="gallery">
+                            <div>
+                                <div class="rail">
+                                    <img src="images/arahis_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis1_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis2_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis3_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis4_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis5_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis1_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis2_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis3_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis4_mini.jpg" alt="арахис" itemprop="image">
+                                    <img src="images/arahis5_mini.jpg" alt="арахис" itemprop="image">
+                                </div>
+                            </div>
+                            <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+                            <button type="button" class="gal_right"><span>&#8250;</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer">
+                        <h1 itemprop="name">АРАХИС</h1>
+                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">400</span>
+                            <meta itemprop="priceCurrency" content="RUB">
+                        </p>
+                        <button type="button" class="btn btn-danger btn-buy">В корзину</button>
+                        <p itemprop="description">
+                        Арахис - это растение семейства бобовых, которое имеет вздутые, продолговатые, овальные, двух или четырех семенные плоды длиной от 1,5 до 6 см, с рисунком, похожим на паутинку. Созревая, «стручки» наклоняются к земле и зарываются в неё, где продолжают дозревать. Многие называют арахис «земляным орехом», но это является неверным с точки зрения ботаники. Сейчас арахис выращивается в промышленных масштабах для получения плодов. Сбор урожая проходит в конце весны. Плоды выкапывают особыми приспособлениями и вилами, чистят и тщательно просушивают, особое внимание уделяется просушке арахиса в скорлупе, во избежание образования в нем плесени.
+                        </p>
+                        <div class="add_table">
+                            <table class="nutrition_facts">
+                                <tbody>
+                                    <tr class="nutrition_facts_title">
+                                        <th colspan="5">Пищевая ценность в 100 граммах:</th>
+                                    </tr>
+                                    <tr class="nutrition_facts_title">
+                                        <td>Белки</td>
+                                        <td>Жиры</td>
+                                        <td>Углеводы</td>
+                                        <td>Клетчатка</td>
+                                        <td>Энергетическая ценность</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.2 г</td>
+                                        <td>45.2 г</td>
+                                        <td>9.9 г</td>
+                                        <td>8.1 г</td>
+                                        <td>552 ккал/2311 кДж</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    
+        <footer class="footer">
+            <section class="container">
+                <div class="footer_wrap">
+                    <div class="footer_left">
+                        <nav class="footer_menu">
+                            <ul class="footer_links_navigation_list">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="product.html">Товар</a></li>
+                                <li><a href="order.html">Корзина</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_copyright">
+                            <p class="copyright_text">Интернет-магазин вкусных и полезных продуктов для вашего здоровья</p>
+                            <p class="copyright_text">Все права защищены<br>Belochka © 2022</p>
+                        </div> 
+                    </div>
+                    <div class="footer_left">
+                        <h4>Наши контакты</h4>
+                        <a href="#">8 800 888-88-88</a>
+                        <p class="footer_info">Время работы отдела продаж:<br>Пн - Вс: 10:00 - 19:00</p>
+                        <p class="footer_info">Москва, ул. Строителей, д.12</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>
