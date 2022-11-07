@@ -316,13 +316,18 @@ $(function(){
                 $('.order').addClass('empty');
             }
         });
-        $('.order .order_row .order_forms form button').click(function(){
+        $('.order .order_row .order_forms form .form_group button').click(function(){
             $('.is-invalid').removeClass('is-invalid');
             $('.invalid-feedback').remove();
             let form = document.forms[1];
+            
             let valid = true;
             if (!form.name.value) {
                 $('form #name').addClass('is-invalid').parents('.form_group').append('<div class="invalid-feedback">Должно быть указано имя!</div>');
+                valid = false;
+            }
+            if (!form.mail.value) {
+                $('form #mail').addClass('is-invalid').parents('.form_group').append('<div class="invalid-feedback">Должно быть указан email!</div>');
                 valid = false;
             }
             if (!form.addr.value) {
