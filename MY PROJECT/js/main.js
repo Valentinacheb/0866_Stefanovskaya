@@ -319,7 +319,7 @@ $(function(){
         $('.order .order_row .order_forms form button').click(function(){
             $('.is-invalid').removeClass('is-invalid');
             $('.invalid-feedback').remove();
-            let form = document.forms[0];
+            let form = document.forms[1];
             let valid = true;
             if (!form.name.value) {
                 $('form #name').addClass('is-invalid').parents('.form_group').append('<div class="invalid-feedback">Должно быть указано имя!</div>');
