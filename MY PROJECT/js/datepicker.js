@@ -34,7 +34,7 @@ function makeCalendar(fieldDate) {
     let weeks = Math.ceil(lastday / 7);
     
     /* начинаем создавать разметку календаря */
-    let hlpstr = '<button type="button" class="close">&times;</button><div class="dp_header"><span class="bigprev"><<</span><span class="prev"><</span><strong>' + russMonth[curmonth] + ' ' + curyear + '</strong><span class="next">></span><span class="bignext">>></span></div>';
+    let hlpstr = '<button type="button" class="close">&times;</button><div class="dp_header"><span class="bigprev" style="float:left"> << </span><span class="prev" style="padding-right:18px"> < </span><span class="month_year">' + russMonth[curmonth] + ' ' + ' ' + ' ' + curyear + '</span><span class="next" style="padding-left:18px"> > </span><span class="bignext" style="float:right"> >> </span></div>';
     hlpstr += '<div class="dp_grid"><span class="headday">Пн</span><span class="headday">Вт</span><span class="headday">Ср</span><span class="headday">Чт</span><span class="headday">Пт</span><span class="headday holiday">Сб</span><span class="headday holiday">Вс</span>';
     
     /* отрисовываем дни всех недель, отмечая дни не в нашем месяце */

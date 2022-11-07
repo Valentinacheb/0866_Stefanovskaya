@@ -938,13 +938,32 @@ footer {
     }
 /* calendar */
     #calendar {
+        margin: auto;
         height: auto;
+        text-align: center;
+        cursor: pointer;
 }
     .dp_grid {
+        color: black;
         display: grid;
         grid-template-columns: repeat(7, auto);
 }
-
+    .month_year {
+        font-size: 25px;        
+}
+    .headday {
+        color: white;
+        background: grey;
+        border: 1px solid white;
+}
+    .next {
+        font-size: 25px; 
+        font-weight: bold;
+}
+    .prev {
+        font-size: 25px;
+        font-weight: bold;        
+    }
 /* adaptive */
 @media (max-width: 1240px) {
     .container {
