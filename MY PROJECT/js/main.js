@@ -290,7 +290,7 @@ $(function(){
         */
     });
     
-    if ('.order') {
+    if (('.order').length) {
         let point = $('.table tbody');
         let count = 1;
         let basket = JSON.parse(localStorage.getItem('basket'));
@@ -316,7 +316,7 @@ $(function(){
                 $('.order').addClass('empty');
             }
         });
-        $('.order .order_row .order_forms form .form_group button').click(function(){
+        $('.order .order_row .order_forms form .order_button button').click(function(){
             $('.is-invalid').removeClass('is-invalid');
             $('.invalid-feedback').remove();
             let form = document.forms[1];
@@ -336,6 +336,10 @@ $(function(){
             }
             if (!form.phone.value.match(/^((\+7)|(8))?\s?\(?\d{3}\)?\s?\d{3}\-?\d{2}\-?\d{2}$/)) {
                 $('form #phone').addClass('is-invalid').parents('.form_group').append('<div class="invalid-feedback">Должен быть указан телефон!</div>');
+                valid = false;
+            }
+            if (!form.agree.checked) {
+                $('form #agree').addClass('is-invalid').parents('.form_check').append('<div class="invalid-feedback">Нет согласия!</div>')
                 valid = false;
             }
             if (valid) {
@@ -363,7 +367,7 @@ $(function(){
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 }).then((response) => response.json()).then(function(json){
-                    localStorage.removeItem('basket')
+                    localStorage.removeItem('basket');
                     getModalWindow('order');
                     $('.modal').append('<p>Ваш заказ оформлен под номером ' + json.id + '.</p>');
                     $('.order').addClass('empty');
@@ -371,7 +375,7 @@ $(function(){
                 });
             }
         });
-        $('.order .icon').click(function(){
+        $('.order .time button').click(function(){
             let date = new Date()
             makeDatePicker(`${date.getFullYear()}-${addZero(+date.getMonth() + 1)}-${addZero(+date.getDate())}`)
         });

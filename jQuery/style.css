@@ -1,0 +1,33 @@
+.modal-fade {
+	display: none;
+}
+.modal-fade:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.8;
+	z-index: 1;
+}
+.modal {
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	padding: 20px;
+	width: 503px;
+    height: auto;
+	left: calc(50% - 240px);
+	background: #fff;
+	border: 1px solid orange;
+	border-radius: 4px; 
+	z-index: 10;
+	opacity: 1;	
+}
+.modal-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
