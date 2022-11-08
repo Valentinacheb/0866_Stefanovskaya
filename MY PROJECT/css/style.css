@@ -217,7 +217,7 @@ footer {
         border-radius: 8px;
         background: #ffd944;
 }
-    .header_right_block { /* Вход и регистрация */
+    .header_right_block { /* Вход в личный кабинет */
 }
     .link_enter {
         display: inline-block;
@@ -226,12 +226,10 @@ footer {
         border-radius: 0.25rem;
         color: black;
 }
-    .link_registration {
-        display: inline-block;
-        padding: 0.25rem 0.25rem;
-        background: #ffd944;
-        border-radius: 0.25rem;
-        color: black;
+    .link_enter span::before {
+        font-family: 'icomoon';    
+        content: '\e902';
+        padding-right: 10px;
 }
     .header_right_basket { /* Корзина */
         display: inline-block;
@@ -245,6 +243,7 @@ footer {
         content: '\e901';
         padding-right: 5px;
 }
+
 /* Список страниц */
     .topmenu {
         display: flex;
@@ -970,14 +969,32 @@ footer {
         width: auto;
         margin: 0 40px;
 }
-    .topmenu li {
-        padding-right: 20px;
-}
     .input_search {
         height: 35px;
         border-radius: 8px;
         width: 200px;
 }
+    .slider {
+    width: 818px;
+}
+    .slider_desk {
+    width: 816px;
+}
+
+@media (max-width: 915px) {
+
+}
+
+
+
+
+
+
+/*
+    .topmenu li {
+        padding-right: 20px;
+}
+
     /*.link_enter {
     display: block;
     width: 52px;
@@ -986,15 +1003,15 @@ footer {
     .link_registration {
     display: block;
 }*/ 
-    .header_right_block {
+/*   .header_right_block {
         display: flex;
         flex-direction: column;
     }
-}
+}?
 
 @media screen and (max-width:767px) {
     .container {
         width: auto;
         margin: 0 16px;
 }
-}
+}*/
