@@ -682,7 +682,7 @@ h4 {
         color: green;
     }
     .gallery .gal_left {
-        left: 0px;
+        left: -10px;
     }
     .gallery .gal_right {
         right: 0px;
@@ -741,7 +741,6 @@ h4 {
         max-width: 100%;
         text-indent: initial;
         border-collapse: collapse;
-        margin-top: 30px;
         font-size: 15px;
         text-align: center;
     }
@@ -1004,6 +1003,18 @@ h4 {
     .slider {
         width: 818px;
     }
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    /*.images {
+        flex: 0 0 470px;
+    }
+    }*/
 }
 
 @media (max-width: 915px) {
@@ -1109,5 +1120,99 @@ h4 {
         padding-bottom: 20px;
         text-align: center;
     }
-
+    .catalog aside {
+        flex: auto;
+    }
+    .cat-item {
+        width: 90px;
+        height: 90px;
+    }
+    .cat-item-image {
+        height: 65px;
+    }
+    .cat-item-image img {
+        max-height: 60px;
+    }
+    .cat-title {
+        font-size: 10px;
+    }
+    .images {
+        flex: 0 0 400px;
+    }
+    .bigimage img{
+        height: 275px;
+        width: 275px;
+    }
+    .gallery {
+        width: 280px;
+        justify-content: center;
+    }
+    .gallery > div {
+        width: 280px;
+    }
+    .gallery .gal_left {
+        left: -10px;
+    }
+    .gallery .gal_right {
+        right: 20px;
+    }
+    .add_table table {
+        display: block;
+        max-width: 100%;
+        text-indent: initial;
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .add_table td, th {
+        padding: 3px;
+        border: 2px solid gray;
+    }
+    .nutrition_facts_title td {
+        background: #eee;
+        color: #6F942A;
+        font-weight: bold;
+    }
+    .offer h1 {
+        padding: 0 5px;
+    }
+    .offer p {
+        padding: 0 5px;
+    }
+    .product .price {
+        padding-right: 0;
+    }
+    .add_table {
+        display: block;
+        position: relative;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    tbody tr {
+        display: inline-block;
+        vertical-align: top;
+    }
+    td {
+        display: block;
+        margin-right: -6px;
+        min-height: 1.25em;
+        text-align: left;
+    }
+    .modal {
+        display: none;
+    }
+    .screener {
+        display: none;
+    }
+    .adress {
+        padding-left: 10px;
+    }
 }
